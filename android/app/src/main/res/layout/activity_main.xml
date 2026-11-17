@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="나의 메모장"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
+
+    <!-- 메모 제목 입력 -->
+    <EditText
+        android:id="@+id/etMemoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="메모 제목을 입력하세요"
+        android:inputType="text"
+        android:textSize="16sp" />
+
+    <!-- 메모 내용 입력 -->
+    <EditText
+        android:id="@+id/etMemoContent"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint="메모 내용을 입력하세요"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp" />
+
+    <!-- 저장 버튼 -->
+    <Button
+        android:id="@+id/btnSaveMemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tvServerResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="서버 응답이 여기에 표시됩니다."
+        android:textSize="14sp"
+        android:layout_marginTop="12dp" />
+
+    <!-- 메모 목록 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMemos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:background="#F2F2F2" />
+
+</LinearLayout>
